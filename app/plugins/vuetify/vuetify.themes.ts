@@ -7,10 +7,9 @@ export const light: ThemeDefinition = {
     // background: '#fff',
     // surface: '#fff',
     // 'primary-lighten-1': '#169FDB',
-    primary: '#F47920',
+    primary: '#267f7a',
     // 'primary-darken-1': '#154976',
     secondary: colors.blueGrey.base,
-    accent: colors.deepPurple.base,
 
     error: colors.red.base,
     info: colors.blue.base,
@@ -26,9 +25,9 @@ export const light: ThemeDefinition = {
 export const dark: ThemeDefinition = {
   dark: true,
   colors: {
-    primary: '#F47920',
+    primary: '#267f7a',
     secondary: colors.blueGrey.base,
-    accent: colors.deepPurple.base,
+    
     error: colors.red.base,
     info: colors.blue.base,
     success: colors.green.base,
