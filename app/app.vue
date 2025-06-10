@@ -1,193 +1,13 @@
-<script setup lang="ts">
-
-type SkillLevel = 'expert' | 'intermediate' | 'base'
-
-interface Skill {
-  name: string
-  icon: string
-  level: SkillLevel
-}
-
-const skills: Array<Skill> = [
-  { name: 'Vue.js', icon: 'logos:vue', level: 'expert' },
-  { name: 'Nuxt', icon: 'logos:nuxt-icon', level: 'expert' },
-  { name: 'Javascript', icon: 'logos:javascript', level: 'expert' },
-  { name: 'Typescript', icon: 'logos:typescript-icon', level: 'expert' },
-  { name: 'HTML 5', icon: 'logos:html-5', level: 'expert' },
-  { name: 'CSS 3, SASS, SCSS ', icon: 'logos:css-3', level: 'expert' },
-  { name: 'Vuetify', icon: 'logos:vuetifyjs', level: 'expert' },
-  { name: 'Node.js', icon: 'logos:nodejs-icon', level: 'expert' },
-  { name: 'Docker', icon: 'logos:docker-icon', level: 'expert' },
-  { name: 'Storybook', icon: 'logos:storybook-icon', level: 'expert' },
-  { name: 'Git', icon: 'logos:git-icon', level: 'expert' },
-  { name: 'MySQL', icon: 'logos:mysql-icon', level: 'expert' },
-  { name: 'PostgreSQL', icon: 'logos:postgresql', level: 'expert' },
-  { name: 'Vitest', icon: 'logos:vitest', level: 'expert' },
-  { name: 'Jest', icon: 'logos:jest', level: 'expert' },
-
-  { name: 'Linux', icon: 'logos:linux-tux', level: 'intermediate' },
-  { name: 'Keycloak', icon: 'simple-icons:keycloak', level: 'intermediate' },
-  { name: 'oAuth 2', icon: 'logos:oauth', level: 'intermediate' },
-  { name: 'D3js', icon: 'logos:d3', level: 'intermediate' },
-  { name: 'Vite', icon: 'logos:vitejs', level: 'intermediate' },
-  { name: 'Webpack', icon: 'logos:webpack', level: 'intermediate' },
-  { name: 'Fastify', icon: 'logos:fastify-icon', level: 'intermediate' },
-  { name: 'ExpressJs', icon: 'devicon:express', level: 'intermediate' },
-  { name: 'Capacitor', icon: 'logos:capacitorjs-icon', level: 'intermediate' },
-  { name: 'Cypress', icon: 'logos:cypress-icon', level: 'intermediate' },
-  // { name: 'H3', icon: '' },
-  // { name: 'Nitro', icon: '' },
-  { name: 'PHP', icon: 'logos:php', level: 'intermediate' },
-  { name: 'Composer', icon: 'logos:composer', level: 'intermediate' },
-  { name: 'MongoDB', icon: 'logos:mongodb-icon', level: 'intermediate' },
-  { name: 'jQuery', icon: 'devicon:jquery', level: 'intermediate' },
-
-  { name: 'TailwindCSS', icon: 'logos:tailwindcss-icon', level: 'base' },
-  { name: 'Angular', icon: 'logos:angular-icon', level: 'base' },
-  { name: 'Pug', icon: 'logos:pug', level: 'base' },
-  { name: 'Golang', icon: 'logos:go', level: 'base' },
-  { name: 'Java', icon: 'logos:java', level: 'base' },
-  { name: 'Spring Boot', icon: 'logos:spring-icon', level: 'base' },
-  { name: 'Swagger', icon: 'logos:swagger', level: 'base' },
-  { name: 'Redis', icon: 'logos:redis', level: 'base' },
-] as const;
-
-type SkillName = typeof skills[number]['name'];
-
-interface Project {
-  img: string
-  lazyImg: string
-  name?: string
-  industry: string
-  myRole: string
-  description: Array<string>
-  myWork: Array<string>
-  technologies: Array<SkillName>
-}
-
-
-function getSkillIconByName(name: SkillName) {
-  return skills.find(s => s.name === name)?.icon
-}
-
-function getSkillsByLevel(level: SkillLevel) {
-  return skills.filter(s => s.level === level)
-}
-
-const projects: Array<Project> = [
-  {
-    img: '/hydraulic-header.jpg',
-    lazyImg: '/hydraulic-header-lazy.jpg',
-    name: 'SN Hydraulik',
-    industry: 'Hydraulik und Maschinenbau',
-    myRole: 'Lead Entwickler',
-    description: ['Software zur Verwaltung von Kunden und deren hydraulischen Maschinen. Konfiguration und Bestellung von Schlauchsystemen. Druchführung von rechtssicheren Prüfungen/Wartungen'],
-    myWork: [
-      'Erstellung und Umsetztung von Workflows ... uvm..dsa dsadasdasdasd .',
-      'Erstellung und Umsetztung von Workflows ... uvm...',
-      'Erstellung und Umsetztung von Workflows ... uvm...',
-    ],
-    technologies: ['Vue.js', 'Nuxt', 'Javascript', 'D3js', 'Vuetify', 'Java Spring', 'oAuth 2', 'PostgreSQL', 'Docker']
-  },
-
-  {
-    img: '/big-data-header.jpg',
-    lazyImg: '/big-data-header-lazy.jpg',
-    industry: 'Mobilitäts- und Logistikdienstleister',
-    myRole: 'Fullstack Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js', 'Javascript', 'Vuetify', 'Node.js', 'Fastify', 'PostgreSQL', 'MongoDB', 'Docker']
-  },
-
-  {
-    img: '/dev-framework-header.jpg',
-    lazyImg: '/dev-framework-header-lazy.jpg',
-    industry: 'Versicherungskonzern',
-    myRole: 'Frontend Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-  {
-    img: '/qm-app-header.jpg',
-    lazyImg: '/qm-app-header-lazy.jpg',
-    industry: 'Healthcare',
-    myRole: 'Lead Frontend Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-
-  {
-    img: '/price-calculator-header.jpg',
-    lazyImg: '/price-calculator-header-lazy.jpg',
-    industry: 'Softwareunternehmen',
-    myRole: 'Fullstack Solo Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-
-  {
-    img: '/codamai-cms-header.jpg',
-    lazyImg: '/codamai-cms-header-lazy.jpg',
-    name: 'Codamic AG',
-    industry: 'Softwareentwicklung',
-    myRole: 'Frontend Entwickler/UX Designer',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-  {
-    img: '/fiber-header.jpg',
-    lazyImg: '/fiber-header-lazy.jpg',
-    industry: 'Telekommunikationsanbieter',
-    myRole: 'Frontend Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-
-  {
-    img: '/dev-websites-header.jpg',
-    lazyImg: '/dev-websites-header-lazy.jpg',
-    name: 'Codamic AG',
-    industry: 'Softwareentwicklung',
-    myRole: 'Fullstack Entwickler',
-    description: ['Lorem Ipsum'],
-    myWork: [
-      'Lorem Ipsum',
-    ],
-    technologies: ['Vue.js']
-  },
-
-]
-
-</script>
-
 <template>
   <v-app>
     <v-app-bar class="app-header">
-      <!-- <div style="width: calc(50% - 24px);" /> -->
+      <div style="width: calc(50% - 24px);" />
       <v-img src="/flowa-logo.png" height="48" width="48" />
+      <div style="width: calc(50% - 24px);" class="pa-3 d-flex align-center justify-end">
+        <v-btn to="/#about">About</v-btn>
+      </div>
+
+      <!-- <div style="width: calc(50% - 24px);" /> -->
       <!-- <div style="width: calc(50% - 24px);" class="pa-3 d-flex align-center justify-end"> -->
       <!-- <v-tabs align-tabs="end" color="deep-purple-accent-4">
           <v-tab to="/">Home</v-tab>
@@ -208,7 +28,7 @@ const projects: Array<Project> = [
           <div class="pa-8 text-center header-box">
             <div class="text-h5 text-sm-h3">Hello my name is</div>
             <div class="text-h3 text-sm-h1 pt-6 gradient-text">Florian Wagner</div>
-            <div class="pt-4">Frontend Engineer / UX Designer / Workflow Optimizer / Backend Enthusiast</div>
+            <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
           </div>
           <div class="pt-2">
             <v-btn variant="text" icon href="https://github.com/Flows-git">
@@ -254,10 +74,7 @@ const projects: Array<Project> = [
         </div>
         <v-row>
           <v-col v-for="(skill, i) of getSkillsByLevel('expert')" :key="`skill-${i}`" cols="6" sm="4" md="3" lg="2">
-            <v-card class="pa-3 text-center">
-              <Icon :name="skill.icon" size="32" />
-              <div>{{ skill.name }}</div>
-            </v-card>
+            <SkillCard :skill="skill" />
           </v-col>
         </v-row>
 
@@ -266,10 +83,7 @@ const projects: Array<Project> = [
         </div>
         <v-row>
           <v-col v-for="(skill, i) of getSkillsByLevel('intermediate')" :key="`skill-${i}`" cols="6" sm="4" md="3" lg="2">
-            <v-card class="pa-3 text-center">
-              <Icon :name="skill.icon" size="32" />
-              <div>{{ skill.name }}</div>
-            </v-card>
+            <SkillCard :skill="skill" />
           </v-col>
         </v-row>
 
@@ -278,10 +92,7 @@ const projects: Array<Project> = [
         </div>
         <v-row>
           <v-col v-for="(skill, i) of getSkillsByLevel('base')" :key="`skill-${i}`" cols="6" sm="4" md="3" lg="2">
-            <v-card class="pa-3 text-center">
-              <Icon :name="skill.icon" size="32" />
-              <div>{{ skill.name }}</div>
-            </v-card>
+            <SkillCard :skill="skill" />
           </v-col>
         </v-row>
         <!-- <v-row>
@@ -353,15 +164,21 @@ const projects: Array<Project> = [
               </v-card-text>
               <v-card-text>
                 <div class="font-weight-bold pb-1">Meine Tätigkeiten im Projekt:</div>
-                <p v-for="(text, j) of project.myWork" :key="`description-${j}`">{{ text }}</p>
+                <ul>
+
+                  <li v-for="(text, j) of project.myWork" :key="`description-${j}`">
+                    {{ text }}
+                  </li>
+                </ul>
               </v-card-text>
-              <v-card-text>
+              <v-card-actions class="d-block text-body-2 px-3">
                 <div class="font-weight-bold pb-2">Eingesetzte Technologien:</div>
-                <Icon v-for="skillName of project.technologies" :key="skillName" :name="getSkillIconByName(skillName) ?? ''" v-tooltip="skillName" size="24"
-                  class="mr-1" />
+                <v-chip v-for="skillName of project.technologies" :key="skillName" class="ma-1">
+                  <Icon :name="getSkillIconByName(skillName) ?? ''" size="16" class="mr-1" />
+                  {{ skillName }}
+                </v-chip>
 
-
-              </v-card-text>
+              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -388,8 +205,8 @@ const projects: Array<Project> = [
 
 <style scoped lang="scss">
 .app-header {
-  background: rgba(var(--v-theme-background), .7) !important;
-  backdrop-filter: blur(8px);
+  background: rgba(var(--v-theme-background), .6) !important;
+  backdrop-filter: blur(4px);
 }
 
 .header-box {
