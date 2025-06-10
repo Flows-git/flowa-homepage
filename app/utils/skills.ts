@@ -5,7 +5,7 @@ export const skills = [
   { name: 'Typescript', icon: 'logos:typescript-icon', level: 'expert', experience: 6 },
   { name: 'HTML 5', icon: 'logos:html-5', level: 'expert', experience: 10 },
   { name: 'CSS 3', icon: 'logos:css-3', level: 'expert', experience: 10 },
-  { name: 'SASS', icon: 'logos:sass', level: 'expert', experience: 10 },
+  { name: 'SASS', icon: 'logos:sass', level: 'expert', experience: 6 },
   { name: 'Vuetify', icon: 'logos:vuetifyjs', level: 'expert', experience: 5 },
   { name: 'Node.js', icon: 'logos:nodejs-icon', level: 'expert', experience: 5 },
   { name: 'Docker', icon: 'logos:docker-icon', level: 'expert', experience: 5 },
@@ -14,7 +14,7 @@ export const skills = [
   { name: 'MySQL', icon: 'logos:mysql-icon', level: 'expert', experience: 10 },
   { name: 'PostgreSQL', icon: 'logos:postgresql', level: 'expert', experience: 6 },
   { name: 'Vitest', icon: 'logos:vitest', level: 'expert', experience: 3 },
-  { name: 'Jest', icon: 'logos:jest', level: 'expert', experience: 6 },
+  { name: 'Jest', icon: 'logos:jest', level: 'expert', experience: 3 },
   { name: 'Pinia', icon: 'logos:pinia', level: 'expert', experience: 4 },
 
   { name: 'Linux', icon: 'logos:linux-tux', level: 'intermediate', experience: 5 },
@@ -48,10 +48,10 @@ export const skills = [
 
 type SkillName = typeof skills[number]['name'];
 
-export function getSkillIconByName(name: SkillName) {
+export function getSkillIconByName(name: SkillName | string) {
   return skills.find(s => s.name === name)?.icon
 }
 
-export function getSkillsByLevel(level: SkillLevel) {
+export function getSkillsByLevel(level: SkillLevel | string) {
   return skills.filter(s => s.level === level)
 }

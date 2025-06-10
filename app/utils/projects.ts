@@ -54,6 +54,7 @@ export const projects: Array<Project> = [
     img: '/qm-app-header.jpg',
     lazyImg: '/qm-app-header-lazy.jpg',
     industry: 'Healthcare',
+    name: 'CURATIS GmbH',
     myRole: 'Lead Frontend Entwickler',
     description: ['iOS App zur Durchführung und Auswertung von Listenbasierten Audits im Healthcare Bereich und ein Portal zur Administration/Ansicht der Audits und Fragelisten'],
     myWork: [
@@ -70,6 +71,7 @@ export const projects: Array<Project> = [
     img: '/price-calculator-header.jpg',
     lazyImg: '/price-calculator-header-lazy.jpg',
     industry: 'Softwareunternehmen',
+    name: 'Seibert Media GmbH',
     myRole: 'Fullstack Solo Entwickler',
     description: [
       'Preiskalkulator für Atlassian Produkte...'
