@@ -7,7 +7,9 @@ const { xs, smAndDown } = useDisplay()
 
 useScript({
   src: 'https://scripts.simpleanalyticscdn.com/latest.js',
-  async: true
+  async: true,
+  crossorigin: false
+  
 })
 </script>
 
