@@ -5,6 +5,9 @@ const showDrawer = ref(false)
 
 const { xs, smAndDown } = useDisplay()
 
+const route = useRoute()
+const isMainPage = computed(() => route.fullPath === '/')
+
 useScript({
   src: 'https://scripts.simpleanalyticscdn.com/latest.js',
   async: true,
@@ -18,7 +21,7 @@ useScript({
     <v-app-bar class="app-header px-3 pl-8 pl-md-3">
       <div v-if="!smAndDown" style="width: calc(50% - 24px);" />
       <div>
-        <v-img src="/flowa-logo.png" height="48" width="48" />
+        <v-img src="/flowa-logo.png" height="48" width="48" alt="Logo der Webseite - Zeigt ein fancy F" />
       </div>
       <div :style="{ width: smAndDown ? 'calc(100% - 48px)' : 'calc(50% - 24px)' }" class="text-end">
         <template v-if="!xs">
@@ -27,7 +30,7 @@ useScript({
           <v-btn to="/#about" :active="false" height="64px">About</v-btn>
           <v-btn to="/#references" :active="false" height="64px">Referenzen</v-btn>
         </template>
-        <v-app-bar-nav-icon v-if="xs" @click="showDrawer = !showDrawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon v-if="xs" @click="showDrawer = !showDrawer" />
       </div>
     </v-app-bar>
     <v-navigation-drawer v-if="xs" v-model="showDrawer" location="top" floating width="160">
@@ -37,7 +40,7 @@ useScript({
         <v-list-item to="/#references" :active="false" class="text-h5 text-center">Referenzen</v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main>
+    <v-main :style="{'--v-layout-top': isMainPage ? 0 : 'var(--v-layout-top)' }">
       <NuxtPage />
     </v-main>
 

@@ -3,16 +3,17 @@ import { useDisplay } from 'vuetify';
 
 const showAllSkills = ref(false)
 const { smAndDown } = useDisplay()
+
 </script>
 
 <template>
-  <div style="margin-top: calc(0px - var(--v-layout-top))">
+  <div>
 
-    <v-parallax src="/background.jpg" lazy-src="/background-lazy.jpg" cover height="100vh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))">
+    <v-parallax src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover height="100lvh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))">
       <v-container fluid class="fill-height d-flex flex-column align-center justify-center" style="padding-top: calc(12px + var(--v-layout-top))">
         <div class="pb-3">
           <v-avatar size="150" style="box-shadow: 0px 0px 15px -1px #41ACA3;">
-            <v-img src="/portait-florian-wagner.jpg" />
+            <v-img src="/portait-florian-wagner.jpg" alt="Portrait von Florian Wagner" />
           </v-avatar>
         </div>
         <div class="pa-8 text-center header-box">
@@ -21,13 +22,13 @@ const { smAndDown } = useDisplay()
           <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
         </div>
         <div class="pt-2">
-          <v-btn variant="text" icon href="https://github.com/Flows-git" target="_blank">
+          <v-btn variant="text" icon href="https://github.com/Flows-git" target="_blank" aria-label="Link zu Florians GitHub">
             <Icon name="simple-icons:github" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2">
+          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2" aria-label="Link zu Florians LinkedIn">
             <Icon name="simple-icons:linkedin" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="mailto:f.wagner92@gmail.com">
+          <v-btn variant="text" icon href="mailto:f.wagner92@gmail.com" aria-label="Schreibe Florian eine E-Mail">
             <Icon name="simple-line-icons:envelope" size="32px" />
           </v-btn>
         </div>
@@ -94,7 +95,7 @@ const { smAndDown } = useDisplay()
 
     </v-container>
     <v-divider />
-    <v-parallax id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg" :height="smAndDown ? 200 : 350">
+    <v-parallax id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg" alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350">
       <div class="fill-height d-flex align-center justify-center">
         <span class="text-h2"> Referenzen </span>
       </div>
@@ -104,7 +105,7 @@ const { smAndDown } = useDisplay()
       <v-row>
         <v-col v-for="(project, i) of projects" :key="`project-${i}`" cols="12" sm="6" md="4" lg="4" xl="3">
           <v-card class="fill-height">
-            <v-img :src="project.img" :lazy-src="project.lazyImg" cover height="200px">
+            <v-img :src="project.img" :lazy-src="project.lazyImg" :alt="`Headerbild für eine Referenz aus der Branche ${project.industry}`" cover height="200px">
               <template #placeholder>
                 <div class="fill-height d-flex align-center justify-center">
                   <v-progress-circular indeterminate color="primary" />

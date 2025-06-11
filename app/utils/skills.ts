@@ -14,7 +14,7 @@ export const skills = [
   { name: 'MySQL', icon: 'logos:mysql-icon', level: 'expert', experience: 10 },
   { name: 'PostgreSQL', icon: 'logos:postgresql', level: 'expert', experience: 6 },
   { name: 'Vitest', icon: 'logos:vitest', level: 'expert', experience: 3 },
-  { name: 'Jest', icon: 'logos:jest', level: 'expert', experience: 3 },
+  { name: 'Jest', icon: 'logos:jest', level: 'expert', experience: 5 },
   { name: 'Pinia', icon: 'logos:pinia', level: 'expert', experience: 4 },
 
   { name: 'Linux', icon: 'logos:linux-tux', level: 'intermediate', experience: 5 },
