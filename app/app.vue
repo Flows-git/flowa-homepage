@@ -40,7 +40,7 @@ useScript({
         <v-list-item to="/#references" :active="false" class="text-h5 text-center">Referenzen</v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main :style="{'--v-layout-top': isMainPage ? 0 : 'var(--v-layout-top)' }">
+    <v-main :style="isMainPage ? '--v-layout-top: 0' : ''">
       <NuxtPage />
     </v-main>
 
