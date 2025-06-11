@@ -21,13 +21,13 @@ const { smAndDown } = useDisplay()
           <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
         </div>
         <div class="pt-2">
-          <v-btn variant="text" icon href="https://github.com/Flows-git">
+          <v-btn variant="text" icon href="https://github.com/Flows-git" target="_blank">
             <Icon name="simple-icons:github" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="https://github.com/Flows-git" class="mx-2">
+          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2">
             <Icon name="simple-icons:linkedin" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="https://github.com/Flows-git">
+          <v-btn variant="text" icon href="mailto:f.wagner92@gmail.com">
             <Icon name="simple-line-icons:envelope" size="32px" />
           </v-btn>
         </div>

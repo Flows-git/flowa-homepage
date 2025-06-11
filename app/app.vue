@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 
-
 const showDrawer = ref(false)
 
 const { xs, smAndDown } = useDisplay()
+
+useScript({
+  src: 'https://scripts.simpleanalyticscdn.com/latest.js',
+  async: true
+})
 </script>
+
 <template>
   <v-app>
     <v-app-bar class="app-header px-3 pl-8 pl-md-3">
@@ -13,7 +18,7 @@ const { xs, smAndDown } = useDisplay()
       <div>
         <v-img src="/flowa-logo.png" height="48" width="48" />
       </div>
-      <div :style="{ width: smAndDown ? 'calc(100% - 48px)' : 'calc(50% - 24px)'}" class="text-end">
+      <div :style="{ width: smAndDown ? 'calc(100% - 48px)' : 'calc(50% - 24px)' }" class="text-end">
         <template v-if="!xs">
 
           <v-btn to="/" :active="false" height="64px">Start</v-btn>
