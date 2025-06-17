@@ -9,7 +9,8 @@ const { smAndDown } = useDisplay()
 <template>
   <div>
 
-    <v-parallax src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover height="100lvh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))">
+    <v-parallax src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover
+      height="100lvh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))">
       <v-container fluid class="fill-height d-flex flex-column align-center justify-center" style="padding-top: calc(12px + var(--v-layout-top))">
         <div class="pb-3">
           <v-avatar size="150" style="box-shadow: 0px 0px 15px -1px #41ACA3;">
@@ -17,7 +18,7 @@ const { smAndDown } = useDisplay()
           </v-avatar>
         </div>
         <div class="pa-8 text-center header-box">
-          <div class="text-h5 text-sm-h4">Hallo und Willkommen bei</div>
+          <div class="text-h5 text-sm-h4">Portfolio von</div>
           <div class="text-h3 text-sm-h1 pt-6 gradient-text">Florian Wagner</div>
           <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
         </div>
@@ -25,7 +26,8 @@ const { smAndDown } = useDisplay()
           <v-btn variant="text" icon href="https://github.com/Flows-git" target="_blank" aria-label="Link zu Florians GitHub">
             <Icon name="simple-icons:github" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2" aria-label="Link zu Florians LinkedIn">
+          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2"
+            aria-label="Link zu Florians LinkedIn">
             <Icon name="simple-icons:linkedin" size="32px" />
           </v-btn>
           <v-btn variant="text" icon href="mailto:f.wagner92@gmail.com" aria-label="Schreibe Florian eine E-Mail">
@@ -40,21 +42,24 @@ const { smAndDown } = useDisplay()
         <span class="gradient-text">About</span>
       </div>
       <div class="py-3">
-        <p>
-          Hallo, ich bin Flo, professioneller Softwareentwickler seit über 11 Jahren. Meine Stärken sind die Umsetzung von komplexen und benutzerfreundlichen
-          Webanwendungen und die Erstellung sowie Optimierung von Workflows um den größtmöglichen Nutzen für das Unternehmen zu erzielen.
+        <p class="pb-2">
+          Hallo, ich bin Flo – leidenschaftlicher Softwareentwickler mit über 11 Jahren Erfahrung. Mein Herz schlägt für die Entwicklung komplexer, intuitiver
+          Webanwendungen und die Optimierung von Workflows, um echten Mehrwert für Unternehmen zu schaffen.
         </p>
-        <p>
-          Im Jahr 2013 habe ich meine Ausbildung zum Fachinformatiker für Anwendungsentwicklung abgeschlossen und war danach in meinem Ausbildungsbetrieb
-          tätig,
-          wo ich für die Administration und Weiterentwicklung der internen und externen Webseiten zuständig war.
+        <p class="pb-2">
+          Schon während meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung, die ich 2013 abgeschlossen habe, wurde mir klar, wie viel Spaß mir das
+          Entwickeln macht. Seitdem lässt mich das Thema nicht mehr los. Direkt im Anschluss durfte ich im Ausbildungsbetrieb Verantwortung übernehmen und
+          interne sowie externe Webauftritte technisch betreuen und weiterentwickeln.
         </p>
-        <p>
-          2018 wechselte ich auf der Suche nach neuen Herausforderungen in ein kleines Start-up. Dort hatte ich die Möglichkeit, an vielen spannenden internen
-          und externen Projekten mitzuwirken. Weitere Informationen dazu sind in meinen Referenzen zu finden.
+        <p class="pb-2">
+          2018 habe ich mich bewusst für den Wechsel in ein dynamisches Start-up entschieden, um neue Perspektiven zu gewinnen und an spannenden, kreativen
+          Projekten mitwirken zu können. Dort konnte ich meine Kenntnisse in verschiedensten Bereichen weiter vertiefen und an vielseitigen internen wie
+          externen Projekten mitwirken – mehr dazu in meinen Referenzen.
         </p>
-
-
+        <p class="pb-2">
+          Auch abseits des Berufs beschäftige ich mich gerne mit neuen Technologien, Frameworks oder Konzepten – sei es aus Neugier, um auf dem neuesten Stand
+          zu bleiben oder einfach, weil mich technische Herausforderungen reizen. Diese Begeisterung treibt mich an, stetig zu lernen und besser zu werden.
+        </p>
       </div>
 
       <div class="text-h3">
@@ -95,17 +100,19 @@ const { smAndDown } = useDisplay()
 
     </v-container>
     <v-divider />
-    <v-parallax id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg" alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350">
+    <v-parallax id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg"
+      alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350">
       <div class="fill-height d-flex align-center justify-center">
         <span class="text-h2"> Referenzen </span>
       </div>
     </v-parallax>
 
     <v-container>
-      <v-row>
-        <v-col v-for="(project, i) of projects" :key="`project-${i}`" cols="12" sm="6" md="4" lg="4" xl="3">
+      <v-row justify="center">
+        <v-col v-for="(project, i) of projects" :key="`project-${i}`" cols="12" sm="6" md="6" lg="4" xl="3">
           <v-card class="fill-height">
-            <v-img :src="project.img" :lazy-src="project.lazyImg" :alt="`Headerbild für eine Referenz aus der Branche ${project.industry}`" cover height="200px">
+            <v-img :src="project.img" :lazy-src="project.lazyImg" :alt="`Headerbild für eine Referenz aus der Branche ${project.industry}`" cover
+              height="200px">
               <template #placeholder>
                 <div class="fill-height d-flex align-center justify-center">
                   <v-progress-circular indeterminate color="primary" />

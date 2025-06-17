@@ -1,4 +1,6 @@
-# Nuxt Minimal Starter
+# Portfolio Homepage of Florian Wagner
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0c2370d0-c142-4a53-ad70-91aef2e68395/deploy-status)](https://app.netlify.com/projects/flowa-me/deploys)
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -7,16 +9,6 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
 bun install
 ```
 
@@ -25,16 +17,6 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
 bun run dev
 ```
 
@@ -43,32 +25,12 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
 bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
 bun run preview
 ```
 
