@@ -19,7 +19,7 @@ const { smAndDown } = useDisplay()
         </div>
         <div class="pa-8 text-center header-box">
           <div class="text-h5 text-sm-h4">Portfolio von</div>
-          <div class="text-h3 text-sm-h1 pt-6 gradient-text">Florian Wagner</div>
+          <div class="text-h3 text-sm-h1 pt-2 gradient-text" style="line-height: 1.1;">Florian Wagner</div>
           <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
         </div>
         <div class="pt-2">
@@ -38,10 +38,10 @@ const { smAndDown } = useDisplay()
     </v-parallax>
 
     <v-container id="about">
-      <div class="text-h2 pb-4">
+      <div class="text-h2 pb-2">
         <span class="gradient-text">About</span>
       </div>
-      <div class="py-3">
+      <div class="w-xl-50">
         <p class="pb-2">
           Hallo, ich bin Flo – leidenschaftlicher Softwareentwickler mit über 11 Jahren Erfahrung. Mein Herz schlägt für die Entwicklung komplexer, intuitiver
           Webanwendungen und die Optimierung von Workflows, um echten Mehrwert für Unternehmen zu schaffen.
@@ -56,16 +56,18 @@ const { smAndDown } = useDisplay()
           Projekten mitwirken zu können. Dort konnte ich meine Kenntnisse in verschiedensten Bereichen weiter vertiefen und an vielseitigen internen wie
           externen Projekten mitwirken – mehr dazu in meinen Referenzen.
         </p>
-        <p class="pb-2">
+        <p>
           Auch abseits des Berufs beschäftige ich mich gerne mit neuen Technologien, Frameworks oder Konzepten – sei es aus Neugier, um auf dem neuesten Stand
           zu bleiben oder einfach, weil mich technische Herausforderungen reizen. Diese Begeisterung treibt mich an, stetig zu lernen und besser zu werden.
         </p>
       </div>
-
+    </v-container>
+    <v-divider />
+    <v-container>
       <div class="text-h3">
         <span class="gradient-text">Skills</span>
       </div>
-      <div class="text-h5 pt-3 pb-2">
+      <div class="text-h5 pt-2 pb-2">
         <span>Experten Kentnisse</span>
       </div>
       <v-row>
@@ -118,12 +120,14 @@ const { smAndDown } = useDisplay()
                   <v-progress-circular indeterminate color="primary" />
                 </div>
               </template>
-              <div class="pa-2">
-                <v-chip color="primary" variant="flat">{{ project.myRole }}</v-chip>
-
+              <div class="fill-height d-flex flex-column justify-space-between">
+                <div class="pa-2">
+                  <v-chip v-tooltip:end="`Meine Rolle`" color="primary" variant="flat">{{ project.myRole }}</v-chip>
+                </div>
+                <div class="d-flex justify-end pa-2">
+                  <v-chip v-tooltip:start="`Projekteinsatz`" variant="flat">{{ project.workDuration }}</v-chip>
+                </div>
               </div>
-
-
             </v-img>
             <v-card-text>
               <div class="text-center">
@@ -138,7 +142,7 @@ const { smAndDown } = useDisplay()
             <v-card-text>
               <div class="font-weight-bold pb-1">Meine Tätigkeiten im Projekt:</div>
               <ul>
-                <li v-for="(text, j) of project.myWork" :key="`description-${j}`">
+                <li v-for="(text, j) of project.myWork" :key="`description-${j}`" class="ml-3">
                   {{ text }}
                 </li>
               </ul>
@@ -149,21 +153,10 @@ const { smAndDown } = useDisplay()
                 <Icon :name="getSkillIconByName(skillName) ?? ''" size="16" class="mr-1" />
                 {{ skillName }}
               </v-chip>
-
             </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
-      <!-- <div>Hydraulik und Maschinenbau - Software zur Verwaltung von Kunden und deren hydraulischen Maschinen. Konfiguration und Bestellung von
-          Schlauchsystemen. Druchführung von rechtssicheren Prüfungen/Wartungen</div>
-        <div>Mobilitäts- und Logistikdienstleister - Big Data Projekt. Auslesen, Auswerten und Darstellen von Unternehmensweiten Kennzahlen</div>
-        <div>Versicherungskonzern - Entwicklung eines TAA (Tariff-Angebot-Antrag) Frameworks und Komponenten Library</div>
-        <div>Softwareunternehmen - Entwicklung eines Preiskalkulators für Attlassianprodukte</div>
-        <div>Telekommunikationsanbieter - Presales Portale für FTTH ausbau</div>
-        <div>Curatis - Healthcare - iOS App und Web Portal zur Durchführung und Auswertung von Qualitätssicherung in Krankenhäusern</div>
-        <div>Codamic AG - Entwicklung und Design von Codamai CMS</div>
-        <div>Codamic AG - Umsetzung diverer Unternehmensauftritte</div>
-        <div>Destatis - Betreuung interner und externer Webauftritte, Migration auf modernes Design</div> -->
     </v-container>
   </div>
 </template>

@@ -3,7 +3,7 @@ import { useDisplay } from 'vuetify';
 
 const showDrawer = ref(false)
 
-const { xs, smAndDown } = useDisplay()
+const { xs, sm } = useDisplay()
 
 const route = useRoute()
 const isMainPage = computed(() => route.fullPath === '/')
@@ -19,11 +19,11 @@ useScript({
 <template>
   <v-app>
     <v-app-bar class="app-header px-3 pl-8 pl-md-3">
-      <div v-if="!smAndDown" style="width: calc(50% - 24px);" />
+      <div v-if="!sm" style="width: calc(50% - 24px);" />
       <div>
         <v-img src="/flowa-logo.png" height="48" width="48" alt="Logo der Webseite - Zeigt ein fancy F" />
       </div>
-      <div :style="{ width: smAndDown ? 'calc(100% - 48px)' : 'calc(50% - 24px)' }" class="text-end">
+      <div :style="{ width: sm ? 'calc(100% - 48px)' : 'calc(50% - 24px)' }" class="text-end">
         <template v-if="!xs">
 
           <v-btn to="/" :active="false" height="64px">Start</v-btn>

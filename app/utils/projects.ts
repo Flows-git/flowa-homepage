@@ -5,6 +5,7 @@ export const projects: Array<Project> = [
     name: 'SN Hydraulik',
     industry: 'Hydraulik und Maschinenbau',
     myRole: 'Lead Entwickler',
+    workDuration: '+9 Monate',
     description: ['Anwendung zur Verwaltung von Kunden und deren hydraulischen Maschinen, Konfiguration und Bestellung von Schlauchsystemen sowie die Druchführung von rechtssicheren Prüfungen/Wartungen'],
     myWork: [
       'Umetzung des Frontends',
@@ -21,6 +22,7 @@ export const projects: Array<Project> = [
     name: 'DB Systel',
     industry: 'Mobilitäts- und Logistikdienstleister',
     myRole: 'Full-Stack Entwickler',
+    workDuration: '1 Jahr',
     description: [
       'Big-Data Anwendung zur Auswertung und Darstellung verschiedenster Kennzahlen des gesamten Konzerns mit dynamisch erstellbaren Kennzahlenseiten'
     ],
@@ -39,6 +41,7 @@ export const projects: Array<Project> = [
     name: 'Gothaer',
     industry: 'Versicherung',
     myRole: 'Frontend Entwickler',
+    workDuration: '1 Jahr 3 Monate',
     description: [
       'Entwicklung eines Vue.js Framework das von anderen Entwicklerteams im Unternehmen genutzt wird um verschiedenste TAA (Tarif-Angebot-Antrag) Formulare zu erstellen.'
     ],
@@ -56,6 +59,7 @@ export const projects: Array<Project> = [
     industry: 'Healthcare',
     name: 'CURATIS GmbH',
     myRole: 'Lead Frontend Entwickler',
+    workDuration: '9 Monate',
     description: ['iOS App zur Durchführung und Auswertung von Listenbasierten Audits im Healthcare Bereich und ein Portal zur Administration/Ansicht der Audits und Fragelisten'],
     myWork: [
       'Umsetzung des App Frontends',
@@ -67,13 +71,13 @@ export const projects: Array<Project> = [
     technologies: ['Vue.js', 'Nuxt', 'HTML 5', 'Typescript', 'SASS', 'Capacitor', 'Vitest', 'Spring Boot', 'Pinia']
   },
 
-
   {
     img: '/price-calculator-header.jpg',
     lazyImg: '/price-calculator-header-lazy.jpg',
     industry: 'Softwareunternehmen',
     name: 'Seibert Media GmbH',
     myRole: 'Full-Stack Solo Entwickler',
+    workDuration: '9 Monate',
     description: [
       'Software zur Angebotskalkulation für Atlassian Produkte um die Kostentransparenz zum Kunde sowie die Arbeitseffizienz im Presales Team zu steigern'
     ],
@@ -86,13 +90,13 @@ export const projects: Array<Project> = [
     technologies: ['Vue.js', 'HTML 5', 'SASS', 'PHP', 'PostgreSQL']
   },
 
-
   {
     img: '/codamai-cms-header.jpg',
     lazyImg: '/codamai-cms-header-lazy.jpg',
     name: 'Codamic AG',
     industry: 'Softwareentwicklung',
     myRole: 'Frontend Entwickler / UX Designer',
+    workDuration: '+2 Jahre',
     description: [
       'Hauseigenes CMS System das mit einer einfachen Oberfläche ein CMS mit flexibler und abgesicherter API als Spring Boot Projekt erstellt, das beliebig mit eigenem Code erweitert werden kann.',
     ],
@@ -110,6 +114,7 @@ export const projects: Array<Project> = [
     lazyImg: '/fiber-header-lazy.jpg',
     industry: 'Telekommunikationsanbieter',
     myRole: 'Frontend Entwickler',
+    workDuration: '1 Jahr 6 Monate',
     description: [
       'Projekt zur Erstellung verschiedener Presales Portale für einen Telekommunikationsanbieter für den Ausbau von Glasfaser.',
       'Das Gesamtprojekt wurde mit bis zu 20 Teams dem SAFe Framwork entwickelt.'
@@ -128,13 +133,14 @@ export const projects: Array<Project> = [
     name: 'Statistisches Bundesamt',
     industry: 'Behörde',
     myRole: 'Software Entwickler / System Admin',
+    workDuration: '5 Jahre',
     description: [
       'Administration und Weiterentwicklung der internen und externen Webauftritte, sowie Mitarbeit an der Umstellung des externen Webauftritts auf ein modernes Design.'
     ],
     myWork: [
       'Erstellung und Erweiterung verschiedener Seiten Elemente',
       'Second-Level-Support',
-      'Migration des Govermet Site Builders (Behördensoftware)'
+      'Migration des Goverment Site Builders (Behördensoftware)'
     ],
     technologies: ['Goverment Site Builder', 'Javascript', 'HTML 5', 'CSS 3', 'JSF']
   },
