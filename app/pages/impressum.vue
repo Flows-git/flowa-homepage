@@ -1,6 +1,10 @@
 <template>
   <v-container>
-    <h1>Impressum</h1>
+    <h1>
+      <span class="gradient-text">
+        Impressum
+      </span>
+    </h1>
     <p>Angaben gemäß § 5 DDG</p>
     <p>
       Florian Wagner<br>

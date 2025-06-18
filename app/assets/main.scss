@@ -14,3 +14,23 @@
     // ),
   )
 );
+
+// global custom css
+.text-white {
+  color: #fff;
+}
+.bg-white {
+  color: #fff;
+}
+
+.v-theme--dark .gradient-text {
+  background-image: linear-gradient(90deg, #186f71, #379992, #41aea4, #8df0e7, #41aea4, #379992, #186f71);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.v-theme--light .gradient-text {
+  background-image: linear-gradient(90deg, #41aea4, #379992, #186f71, #379992, #41aea4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

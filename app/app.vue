@@ -1,23 +1,26 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
 
-const showDrawer = ref(false)
-
-const { xs, sm } = useDisplay()
-
-const route = useRoute()
-const isMainPage = computed(() => route.fullPath === '/')
-
 useScript({
   src: 'https://scripts.simpleanalyticscdn.com/latest.js',
   async: true,
   crossorigin: false,
-
 })
+
+const { xs, sm } = useDisplay()
+
+const showDrawer = ref(false)
+
+const menuitems = [
+  { title: 'Start', to: '/' },
+  { title: 'About', to: '/#about' },
+  { title: 'Referenzen', to: '/#references' },
+]
 </script>
 
 <template>
   <v-app>
+    <!-- header -->
     <v-app-bar class="app-header px-3 pl-8 pl-md-3">
       <div v-if="!sm" style="width: calc(50% - 24px);" />
       <div>
@@ -25,36 +28,29 @@ useScript({
       </div>
       <div :style="{ width: sm ? 'calc(100% - 48px)' : 'calc(50% - 24px)' }" class="text-end">
         <template v-if="!xs">
-          <v-btn to="/" :active="false" height="64px">
-            Start
-          </v-btn>
-          <v-btn to="/#about" :active="false" height="64px">
-            About
-          </v-btn>
-          <v-btn to="/#references" :active="false" height="64px">
-            Referenzen
+          <v-btn v-for="(item, i) of menuitems" :key="`item-${i}`" :to="item.to" :active="false" height="64px">
+            {{ item.title }}
           </v-btn>
         </template>
         <v-app-bar-nav-icon v-if="xs" @click="showDrawer = !showDrawer" />
       </div>
     </v-app-bar>
+
+    <!-- mobile menu -->
     <v-navigation-drawer v-if="xs" v-model="showDrawer" location="top" floating width="160">
       <v-list v-if="showDrawer" style="background: none;">
-        <v-list-item to="/" :active="false" class="text-h5 text-center">
-          Start
-        </v-list-item>
-        <v-list-item to="/#about" :active="false" class="text-h5 text-center">
-          About
-        </v-list-item>
-        <v-list-item to="/#references" :active="false" class="text-h5 text-center">
-          Referenzen
+        <v-list-item v-for="(item, i) of menuitems" :key="`item-${i}`" :to="item.to" :active="false" class="text-h5 text-center">
+          {{ item.title }}
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main :style="isMainPage ? '--v-layout-top: 0' : ''">
+
+    <!-- content -->
+    <v-main>
       <NuxtPage />
     </v-main>
 
+    <!-- footer -->
     <v-footer class="justify-end">
       <v-btn density="compact" variant="text" to="/impressum">
         Impressum

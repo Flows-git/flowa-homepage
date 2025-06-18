@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1><strong>Datenschutzerklärung</strong></h1>
+    <h1><strong class="gradient-text">Datenschutzerklärung</strong></h1>
     <p>
       Es freut uns sehr, dass Sie sich für unsere Organisation interessieren. Der Schutz Ihrer personenbezogenen Daten ist unserer Geschäftsleitung besonders
       wichtig. Sie können unsere Webseiten in der Regel nutzen, ohne uns dabei personenbezogene Daten preiszugeben. Sofern Sie jedoch speziellere Dienste über
