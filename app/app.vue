@@ -32,6 +32,7 @@ const menuitems = [
             {{ item.title }}
           </v-btn>
         </template>
+        <ThemeSwitch />
         <v-app-bar-nav-icon v-if="xs" @click="showDrawer = !showDrawer" />
       </div>
     </v-app-bar>
