@@ -27,7 +27,7 @@ export const dark: ThemeDefinition = {
   colors: {
     primary: '#267f7a',
     secondary: colors.blueGrey.base,
-    
+
     error: colors.red.base,
     info: colors.blue.base,
     success: colors.green.base,

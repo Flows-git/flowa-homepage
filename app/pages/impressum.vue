@@ -2,18 +2,23 @@
   <v-container>
     <h1>Impressum</h1>
     <p>Angaben gemäß § 5 DDG</p>
-    <p>Florian Wagner<br>
+    <p>
+      Florian Wagner<br>
       <br>
       Am Itzelgrund 9B<br>
       65510 Idstein <br>
     </p>
-    <p> <strong>Vertreten durch: </strong><br>
+    <p>
+      <strong>Vertreten durch: </strong><br>
       Florian Wagner<br>
     </p>
-    <p><strong>Kontakt:</strong> <br>
+    <p>
+      <strong>Kontakt:</strong> <br>
       Telefon: 0163-1637717<br>
-      E-Mail: <a href='mailto:f.wagner92@gmail.com'>f.wagner92@gmail.com</a><br></p>
-    <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
+      E-Mail: <a href="mailto:f.wagner92@gmail.com">f.wagner92@gmail.com</a><br>
+    </p>
+    <p>
+      <strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
       Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine
       Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
       Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
@@ -42,9 +47,12 @@
       unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
     </p><br>
     Erstellt mit dem <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator</a> von WebsiteWissen.com, dem Ratgeber für <a
-      href="https://websitewissen.com/website-erstellen" rel="dofollow">Website-Erstellung</a>, <a
-href="https://websitewissen.com/homepage-baukasten-vergleich"
-      rel="dofollow">Homepage-Baukästen</a> und <a href="https://websitewissen.com/shopsysteme-vergleich" rel="dofollow">Shopsysteme</a>. Rechtstext von der <a
-      href="https://www.kanzlei-hasselbach.de/" rel="dofollow">Kanzlei Hasselbach</a>
+      href="https://websitewissen.com/website-erstellen" rel="dofollow"
+    >Website-Erstellung</a>, <a
+      href="https://websitewissen.com/homepage-baukasten-vergleich"
+      rel="dofollow"
+    >Homepage-Baukästen</a> und <a href="https://websitewissen.com/shopsysteme-vergleich" rel="dofollow">Shopsysteme</a>. Rechtstext von der <a
+      href="https://www.kanzlei-hasselbach.de/" rel="dofollow"
+    >Kanzlei Hasselbach</a>
   </v-container>
 </template>

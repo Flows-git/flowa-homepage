@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify';
+import { useDisplay } from 'vuetify'
 
 const showAllSkills = ref(false)
 const { smAndDown } = useDisplay()
-
 </script>
 
 <template>
   <div>
-
-    <v-parallax src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover
-      height="100lvh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))">
+    <v-parallax
+      src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover
+      height="100lvh" width="calc(100vw - var(--v-layout-left) - var(--v-layout-right))"
+    >
       <v-container fluid class="fill-height d-flex flex-column align-center justify-center" style="padding-top: calc(12px + var(--v-layout-top))">
         <div class="pb-3">
           <v-avatar size="150" style="box-shadow: 0px 0px 15px -1px #41ACA3;">
@@ -18,16 +18,24 @@ const { smAndDown } = useDisplay()
           </v-avatar>
         </div>
         <div class="pa-8 text-center header-box">
-          <div class="text-h5 text-sm-h4">Portfolio von</div>
-          <div class="text-h3 text-sm-h1 pt-2 gradient-text" style="line-height: 1.1;">Florian Wagner</div>
-          <div class="pt-4">Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler</div>
+          <div class="text-h5 text-sm-h4">
+            Portfolio von
+          </div>
+          <div class="text-h3 text-sm-h1 pt-2 gradient-text" style="line-height: 1.1;">
+            Florian Wagner
+          </div>
+          <div class="pt-4">
+            Frontend Entwickler / UX Designer / Workflow Optimierer / Backend Entwickler
+          </div>
         </div>
         <div class="pt-2">
           <v-btn variant="text" icon href="https://github.com/Flows-git" target="_blank" aria-label="Link zu Florians GitHub">
             <Icon name="simple-icons:github" size="32px" />
           </v-btn>
-          <v-btn variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2"
-            aria-label="Link zu Florians LinkedIn">
+          <v-btn
+            variant="text" icon href="https://www.linkedin.com/in/florian-wagner-4430851aa" target="_blank" class="mx-2"
+            aria-label="Link zu Florians LinkedIn"
+          >
             <Icon name="simple-icons:linkedin" size="32px" />
           </v-btn>
           <v-btn variant="text" icon href="mailto:f.wagner92@gmail.com" aria-label="Schreibe Florian eine E-Mail">
@@ -76,7 +84,9 @@ const { smAndDown } = useDisplay()
         </v-col>
       </v-row>
       <div v-if="!showAllSkills" class="text-center py-3">
-        <v-btn color="primary" @click="showAllSkills = true">Alle Kentnisse anzeigen</v-btn>
+        <v-btn color="primary" @click="showAllSkills = true">
+          Alle Kentnisse anzeigen
+        </v-btn>
       </div>
       <v-expand-transition>
         <div v-if="showAllSkills">
@@ -99,11 +109,12 @@ const { smAndDown } = useDisplay()
           </v-row>
         </div>
       </v-expand-transition>
-
     </v-container>
     <v-divider />
-    <v-parallax id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg"
-      alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350">
+    <v-parallax
+      id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg"
+      alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350"
+    >
       <div class="fill-height d-flex align-center justify-center">
         <span class="text-h2"> Referenzen </span>
       </div>
@@ -113,8 +124,10 @@ const { smAndDown } = useDisplay()
       <v-row justify="center">
         <v-col v-for="(project, i) of projects" :key="`project-${i}`" cols="12" sm="6" md="6" lg="4" xl="3">
           <v-card class="fill-height">
-            <v-img :src="project.img" :lazy-src="project.lazyImg" :alt="`Headerbild für eine Referenz aus der Branche ${project.industry}`" cover
-              height="200px">
+            <v-img
+              :src="project.img" :lazy-src="project.lazyImg" :alt="`Headerbild für eine Referenz aus der Branche ${project.industry}`" cover
+              height="200px"
+            >
               <template #placeholder>
                 <div class="fill-height d-flex align-center justify-center">
                   <v-progress-circular indeterminate color="primary" />
@@ -122,25 +135,35 @@ const { smAndDown } = useDisplay()
               </template>
               <div class="fill-height d-flex flex-column justify-space-between">
                 <div class="pa-2">
-                  <v-chip v-tooltip:end="`Meine Rolle`" color="primary" variant="flat">{{ project.myRole }}</v-chip>
+                  <v-chip v-tooltip:end="`Meine Rolle`" color="primary" variant="flat">
+                    {{ project.myRole }}
+                  </v-chip>
                 </div>
                 <div class="d-flex justify-end pa-2">
-                  <v-chip v-tooltip:start="`Projekteinsatz`" variant="flat">{{ project.workDuration }}</v-chip>
+                  <v-chip v-tooltip:start="`Projekteinsatz`" variant="flat">
+                    {{ project.workDuration }}
+                  </v-chip>
                 </div>
               </div>
             </v-img>
             <v-card-text>
               <div class="text-center">
-                <div class="text-body-2 opacity-50">Branche</div>
+                <div class="text-body-2 opacity-50">
+                  Branche
+                </div>
                 <div class="text-h6">
                   {{ project.industry }}
                 </div>
               </div>
               <v-divider class="py-2" />
-              <p v-for="(text, j) of project.description" :key="`description-${j}`">{{ text }}</p>
+              <p v-for="(text, j) of project.description" :key="`description-${j}`">
+                {{ text }}
+              </p>
             </v-card-text>
             <v-card-text>
-              <div class="font-weight-bold pb-1">Meine Tätigkeiten im Projekt:</div>
+              <div class="font-weight-bold pb-1">
+                Meine Tätigkeiten im Projekt:
+              </div>
               <ul>
                 <li v-for="(text, j) of project.myWork" :key="`description-${j}`" class="ml-3">
                   {{ text }}
@@ -148,7 +171,9 @@ const { smAndDown } = useDisplay()
               </ul>
             </v-card-text>
             <v-card-actions class="d-block text-body-2 px-3">
-              <div class="font-weight-bold pb-2">Eingesetzte Technologien:</div>
+              <div class="font-weight-bold pb-2">
+                Eingesetzte Technologien:
+              </div>
               <v-chip v-for="skillName of project.technologies" :key="skillName" class="ma-1">
                 <Icon :name="getSkillIconByName(skillName) ?? ''" size="16" class="mr-1" />
                 {{ skillName }}
@@ -160,7 +185,6 @@ const { smAndDown } = useDisplay()
     </v-container>
   </div>
 </template>
-
 
 <style scoped lang="scss">
 .header-box {

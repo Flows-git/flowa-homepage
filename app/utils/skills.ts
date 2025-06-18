@@ -44,9 +44,9 @@ export const skills = [
   { name: 'Swagger', icon: 'logos:swagger', level: 'base', experience: 2 },
   { name: 'Redis', icon: 'logos:redis', level: 'base', experience: 1 },
   { name: 'Firebase', icon: 'logos:firebase', level: 'base', experience: 1 },
-] as const satisfies readonly Skill[];
+] as const satisfies readonly Skill[]
 
-type SkillName = typeof skills[number]['name'];
+type SkillName = typeof skills[number]['name']
 
 export function getSkillIconByName(name: SkillName | string) {
   return skills.find(s => s.name === name)?.icon

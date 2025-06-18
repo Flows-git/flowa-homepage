@@ -1,8 +1,8 @@
 import { createVuetify } from 'vuetify'
+import { aliases } from 'vuetify/iconsets/mdi-svg'
 import { de } from 'vuetify/locale'
 import { defaultProps } from './vuetify.defaults'
 import { theme } from './vuetify.themes'
-import { aliases } from 'vuetify/iconsets/mdi-svg'
 
 import '~/assets/main.scss'
 
@@ -16,8 +16,8 @@ export default defineNuxtPlugin((app) => {
     theme,
     defaults: defaultProps,
     icons: {
-      aliases
-    }
+      aliases,
+    },
   })
   app.vueApp.use(vuetify)
 })

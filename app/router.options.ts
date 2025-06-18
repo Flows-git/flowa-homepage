@@ -1,8 +1,7 @@
-
-import type { RouterConfig } from "@nuxt/schema";
+import type { RouterConfig } from '@nuxt/schema'
 
 export default <RouterConfig>{
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) { // , from, savedPosition
     if (to.hash) {
       return {
         el: to.hash,
@@ -18,7 +17,7 @@ export default <RouterConfig>{
     }
 
     return {
-      top: 0
+      top: 0,
     }
-  }
-};
+  },
+}

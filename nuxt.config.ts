@@ -2,10 +2,13 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
-  compatibilityDate: '2025-05-15',
+
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/scripts',
+  ],
   devtools: { enabled: true },
   app: {
     head: {
@@ -14,7 +17,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       meta: [
         { name: 'description', content: 'Portfolio von Florian Wagner – Spezialisiert auf moderne Webentwicklung mit Vue, Node.js und TypeScript. Jetzt Projekte entdecken!' },
-        { name: 'keywords', content: 'Webentwickler, Full-Stack, Vue, Nuxt, Node.js, TypeScript, Portfolio, Softwareentwickler, Florian Wagner'},
+        { name: 'keywords', content: 'Webentwickler, Full-Stack, Vue, Nuxt, Node.js, TypeScript, Portfolio, Softwareentwickler, Florian Wagner' },
         { name: 'author', content: 'Florian Wagner' },
         { name: 'og:title', content: 'Florian Wagner - Entwickler Portfolio' },
         { name: 'og:description', content: 'Softwareentwickler mit Fokus auf moderne Technologien – jetzt mehr erfahren!' },
@@ -23,20 +26,20 @@ export default defineNuxtConfig({
         { name: 'og:type', content: 'website' },
       ],
       htmlAttrs: {
-        lang: 'de'
+        lang: 'de',
       },
       link: [
-        {rel: 'canonical', href: 'https://flowa.me'}
-      ]
+        { rel: 'canonical', href: 'https://flowa.me' },
+      ],
     },
   },
-
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/scripts'
-  ],
+  build: {
+    transpile: ['vuetify'],
+  },
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: '2025-05-15',
 
   vite: {
     vue: {
@@ -47,8 +50,5 @@ export default defineNuxtConfig({
     plugins: [
       vuetify({ autoImport: true }),
     ],
-  },
-  build: {
-    transpile: ['vuetify'],
   },
 })

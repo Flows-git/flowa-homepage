@@ -13,7 +13,7 @@ export const projects: Array<Project> = [
       'Erstellung und Umsetzung von Workflows',
       'Kundenberatung',
     ],
-    technologies: ['Vue.js', 'Nuxt', 'Javascript', 'Typescript', 'Vuetify', 'Spring Boot', 'oAuth 2', 'Keycloak', 'PostgreSQL', 'Docker']
+    technologies: ['Vue.js', 'Nuxt', 'Javascript', 'Typescript', 'Vuetify', 'Spring Boot', 'oAuth 2', 'Keycloak', 'PostgreSQL', 'Docker'],
   },
 
   {
@@ -24,15 +24,15 @@ export const projects: Array<Project> = [
     myRole: 'Full-Stack Entwickler',
     workDuration: '1 Jahr',
     description: [
-      'Big-Data Anwendung zur Auswertung und Darstellung verschiedenster Kennzahlen des gesamten Konzerns mit dynamisch erstellbaren Kennzahlenseiten'
+      'Big-Data Anwendung zur Auswertung und Darstellung verschiedenster Kennzahlen des gesamten Konzerns mit dynamisch erstellbaren Kennzahlenseiten',
     ],
     myWork: [
       'Erstellung und Optimierung von D3js Diagrammen',
       'Einführung von Vuetify und Ablösung des legacy Frameworks',
       'Einführung von MongoDB zur einfacheren Datenhaltung komplexer Seitenstrukturen',
-      'Erstellung und Optimierung komplexer SQL Abfragen zur Datenanalyse'
+      'Erstellung und Optimierung komplexer SQL Abfragen zur Datenanalyse',
     ],
-    technologies: ['Vue.js', 'Javascript', 'SASS', 'Vuetify', 'D3js', 'Node.js', 'Fastify', 'PostgreSQL', 'MongoDB', 'Docker', 'Python']
+    technologies: ['Vue.js', 'Javascript', 'SASS', 'Vuetify', 'D3js', 'Node.js', 'Fastify', 'PostgreSQL', 'MongoDB', 'Docker', 'Python'],
   },
 
   {
@@ -43,14 +43,14 @@ export const projects: Array<Project> = [
     myRole: 'Frontend Entwickler',
     workDuration: '1 Jahr 3 Monate',
     description: [
-      'Entwicklung eines Vue.js Framework das von anderen Entwicklerteams im Unternehmen genutzt wird um verschiedenste TAA (Tarif-Angebot-Antrag) Formulare zu erstellen.'
+      'Entwicklung eines Vue.js Framework das von anderen Entwicklerteams im Unternehmen genutzt wird um verschiedenste TAA (Tarif-Angebot-Antrag) Formulare zu erstellen.',
     ],
     myWork: [
       'Erstellung generischer Frontend Komponenten zur Generierung von TAA Formularen',
       'Einführung von Unit und Component Tests',
       'Einführung eines Living Style Guides',
     ],
-    technologies: ['Vue.js', 'HTML 5', 'SASS', 'Node.js', 'Spring Boot',  'Vitest', 'Storybook', 'Vuex']
+    technologies: ['Vue.js', 'HTML 5', 'SASS', 'Node.js', 'Spring Boot', 'Vitest', 'Storybook', 'Vuex'],
   },
 
   {
@@ -66,9 +66,9 @@ export const projects: Array<Project> = [
       'Einrichten des App Deployments',
       'Umsetzung der Auswertungsseiten im Web Portal',
       'Analyse der Auswertungsworkflows',
-      'UX Design'
+      'UX Design',
     ],
-    technologies: ['Vue.js', 'Nuxt', 'HTML 5', 'Typescript', 'SASS', 'Capacitor', 'Vitest', 'Spring Boot', 'Pinia']
+    technologies: ['Vue.js', 'Nuxt', 'HTML 5', 'Typescript', 'SASS', 'Capacitor', 'Vitest', 'Spring Boot', 'Pinia'],
   },
 
   {
@@ -79,15 +79,15 @@ export const projects: Array<Project> = [
     myRole: 'Full-Stack Solo Entwickler',
     workDuration: '9 Monate',
     description: [
-      'Software zur Angebotskalkulation für Atlassian Produkte um die Kostentransparenz zum Kunde sowie die Arbeitseffizienz im Presales Team zu steigern'
+      'Software zur Angebotskalkulation für Atlassian Produkte um die Kostentransparenz zum Kunde sowie die Arbeitseffizienz im Presales Team zu steigern',
     ],
     myWork: [
       'Erstellung der Designs',
       'Umsetzung des Frontends',
       'Umsetzung des Backends',
-      'Erstellung von Unit Tests mit PHPUnit'
+      'Erstellung von Unit Tests mit PHPUnit',
     ],
-    technologies: ['Vue.js', 'HTML 5', 'SASS', 'PHP', 'PostgreSQL']
+    technologies: ['Vue.js', 'HTML 5', 'SASS', 'PHP', 'PostgreSQL'],
   },
 
   {
@@ -104,9 +104,9 @@ export const projects: Array<Project> = [
       'Erstellung der Designs',
       'Umsetzung des Frontends',
       'Ausarbeiten von Workflows',
-      'Erstellung von Unit, Integration und E2E Tests'
+      'Erstellung von Unit, Integration und E2E Tests',
     ],
-    technologies: ['Vue.js', 'Nuxt', 'HTML 5', 'SASS', 'Typescript', 'Cypress', 'Docker', 'Spring Boot', 'Jest', 'Keycloak', 'MySQL', 'Storybook', 'Vuex']
+    technologies: ['Vue.js', 'Nuxt', 'HTML 5', 'SASS', 'Typescript', 'Cypress', 'Docker', 'Spring Boot', 'Jest', 'Keycloak', 'MySQL', 'Storybook', 'Vuex'],
   },
 
   {
@@ -117,15 +117,14 @@ export const projects: Array<Project> = [
     workDuration: '1 Jahr 6 Monate',
     description: [
       'Projekt zur Erstellung verschiedener Presales Portale für einen Telekommunikationsanbieter für den Ausbau von Glasfaser.',
-      'Das Gesamtprojekt wurde mit bis zu 20 Teams dem SAFe Framwork entwickelt.'
+      'Das Gesamtprojekt wurde mit bis zu 20 Teams dem SAFe Framwork entwickelt.',
     ],
     myWork: [
       'Umsetzung der Frontends zur Vorbestellung von Glasfaser, sowie die Verwaltung der Vorbestellungen',
-      'Einführung von Vue in bestehendes Projekt'
+      'Einführung von Vue in bestehendes Projekt',
     ],
-    technologies: ['Vue.js', 'Pug', 'HTML 5', 'SASS', 'Golang', 'Geb (Groovy)']
+    technologies: ['Vue.js', 'Pug', 'HTML 5', 'SASS', 'Golang', 'Geb (Groovy)'],
   },
-
 
   {
     img: '/website-admin-header.jpg',
@@ -135,14 +134,14 @@ export const projects: Array<Project> = [
     myRole: 'Software Entwickler / System Admin',
     workDuration: '5 Jahre',
     description: [
-      'Administration und Weiterentwicklung der internen und externen Webauftritte, sowie Mitarbeit an der Umstellung des externen Webauftritts auf ein modernes Design.'
+      'Administration und Weiterentwicklung der internen und externen Webauftritte, sowie Mitarbeit an der Umstellung des externen Webauftritts auf ein modernes Design.',
     ],
     myWork: [
       'Erstellung und Erweiterung verschiedener Seiten Elemente',
       'Second-Level-Support',
-      'Migration des Goverment Site Builders (Behördensoftware)'
+      'Migration des Goverment Site Builders (Behördensoftware)',
     ],
-    technologies: ['Goverment Site Builder', 'Javascript', 'HTML 5', 'CSS 3', 'JSF']
+    technologies: ['Goverment Site Builder', 'Javascript', 'HTML 5', 'CSS 3', 'JSF'],
   },
 
 ]
