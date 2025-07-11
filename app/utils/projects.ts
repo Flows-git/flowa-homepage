@@ -41,7 +41,7 @@ export const projects: Array<Project> = [
     name: 'Gothaer',
     industry: 'Versicherung',
     myRole: 'Frontend Entwickler',
-    workDuration: '1 Jahr 3 Monate',
+    workDuration: '1 Jahr 2 Monate',
     description: [
       'Entwicklung eines Vue.js Framework das von anderen Entwicklerteams im Unternehmen genutzt wird um verschiedenste TAA (Tarif-Angebot-Antrag) Formulare zu erstellen.',
     ],
@@ -87,7 +87,7 @@ export const projects: Array<Project> = [
       'Umsetzung des Backends',
       'Erstellung von Unit Tests mit PHPUnit',
     ],
-    technologies: ['Vue.js', 'HTML 5', 'SASS', 'PHP', 'PostgreSQL'],
+    technologies: ['Vue.js', 'HTML 5', 'SASS', 'PHP', 'PostgreSQL', 'PHPUnit'],
   },
 
   {
@@ -96,7 +96,7 @@ export const projects: Array<Project> = [
     name: 'Codamic AG',
     industry: 'Softwareentwicklung',
     myRole: 'Frontend Entwickler / UX Designer',
-    workDuration: '+2 Jahre',
+    workDuration: '18 Monate',
     description: [
       'Hauseigenes CMS System das mit einer einfachen Oberfläche ein CMS mit flexibler und abgesicherter API als Spring Boot Projekt erstellt, das beliebig mit eigenem Code erweitert werden kann.',
     ],
@@ -114,7 +114,7 @@ export const projects: Array<Project> = [
     lazyImg: '/fiber-header-lazy.jpg',
     industry: 'Telekommunikationsanbieter',
     myRole: 'Frontend Entwickler',
-    workDuration: '1 Jahr 6 Monate',
+    workDuration: '1 Jahr',
     description: [
       'Projekt zur Erstellung verschiedener Presales Portale für einen Telekommunikationsanbieter für den Ausbau von Glasfaser.',
       'Das Gesamtprojekt wurde mit bis zu 20 Teams dem SAFe Framwork entwickelt.',
@@ -123,7 +123,7 @@ export const projects: Array<Project> = [
       'Umsetzung der Frontends zur Vorbestellung von Glasfaser, sowie die Verwaltung der Vorbestellungen',
       'Einführung von Vue in bestehendes Projekt',
     ],
-    technologies: ['Vue.js', 'Pug', 'HTML 5', 'SASS', 'Golang', 'Geb (Groovy)'],
+    technologies: ['Vue.js', 'Pug', 'HTML 5', 'SASS', 'Golang', 'Jest', 'Geb (Groovy)'],
   },
 
   {
