@@ -111,6 +111,17 @@ const { smAndDown } = useDisplay()
         </v-col>
       </v-row>
     </v-container>
+
+    <v-container>
+      <div class="text-h3 pb-4">
+        <span class="gradient-text">Private Projekte</span>
+      </div>
+      <v-row justify="center">
+        <v-col v-for="(project, i) of privateProjects" :key="`project-${i}`" cols="12" sm="6" md="6" lg="4" xl="3">
+          <PrivateProjectCard :project="project" class="fill-height" />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

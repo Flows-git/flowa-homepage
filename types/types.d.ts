@@ -7,14 +7,22 @@ interface Skill {
   experience?: number
 }
 
-interface Project {
+interface BaseProject {
   img: string
   lazyImg: string
+  description: Array<string>
+  myWork: Array<string>
+  technologies: Array<string>
+}
+
+interface Project extends BaseProject {
   name?: string
   industry: string
   myRole: string
   workDuration: string
-  description: Array<string>
-  myWork: Array<string>
-  technologies: Array<string>
+}
+
+interface PrivateProject extends BaseProject {
+  name: string
+  links: Array<{ label: string, url: string }>
 }

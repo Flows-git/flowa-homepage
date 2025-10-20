@@ -1,11 +1,11 @@
 export const projects: Array<Project> = [
   {
-    img: '/hydraulic-header.jpg',
-    lazyImg: '/hydraulic-header-lazy.jpg',
+    img: '/workProjects/hydraulic-header.jpg',
+    lazyImg: '/workProjects/hydraulic-header-lazy.jpg',
     name: 'SN Hydraulik',
     industry: 'Hydraulik und Maschinenbau',
     myRole: 'Lead Entwickler',
-    workDuration: '+9 Monate',
+    workDuration: 'Seit Oktober 2024',
     description: ['Anwendung zur Verwaltung von Kunden und deren hydraulischen Maschinen, Konfiguration und Bestellung von Schlauchsystemen sowie die Druchführung von rechtssicheren Prüfungen/Wartungen'],
     myWork: [
       'Umetzung des Frontends',
@@ -17,8 +17,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/big-data-header.jpg',
-    lazyImg: '/big-data-header-lazy.jpg',
+    img: '/workProjects/big-data-header.jpg',
+    lazyImg: '/workProjects/big-data-header-lazy.jpg',
     name: 'DB Systel',
     industry: 'Mobilitäts- und Logistikdienstleister',
     myRole: 'Full-Stack Entwickler',
@@ -36,8 +36,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/dev-framework-header.jpg',
-    lazyImg: '/dev-framework-header-lazy.jpg',
+    img: '/workProjects/dev-framework-header.jpg',
+    lazyImg: '/workProjects/dev-framework-header-lazy.jpg',
     name: 'Gothaer',
     industry: 'Versicherung',
     myRole: 'Frontend Entwickler',
@@ -54,8 +54,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/qm-app-header.jpg',
-    lazyImg: '/qm-app-header-lazy.jpg',
+    img: '/workProjects/qm-app-header.jpg',
+    lazyImg: '/workProjects/qm-app-header-lazy.jpg',
     industry: 'Healthcare',
     name: 'CURATIS GmbH',
     myRole: 'Lead Frontend Entwickler',
@@ -72,8 +72,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/price-calculator-header.jpg',
-    lazyImg: '/price-calculator-header-lazy.jpg',
+    img: '/workProjects/price-calculator-header.jpg',
+    lazyImg: '/workProjects/price-calculator-header-lazy.jpg',
     industry: 'Softwareunternehmen',
     name: 'Seibert Media GmbH',
     myRole: 'Full-Stack Solo Entwickler',
@@ -91,8 +91,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/codamai-cms-header.jpg',
-    lazyImg: '/codamai-cms-header-lazy.jpg',
+    img: '/workProjects/codamai-cms-header.jpg',
+    lazyImg: '/workProjects/codamai-cms-header-lazy.jpg',
     name: 'Codamic AG',
     industry: 'Softwareentwicklung',
     myRole: 'Frontend Entwickler / UX Designer',
@@ -110,8 +110,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/fiber-header.jpg',
-    lazyImg: '/fiber-header-lazy.jpg',
+    img: '/workProjects/fiber-header.jpg',
+    lazyImg: '/workProjects/fiber-header-lazy.jpg',
     industry: 'Telekommunikationsanbieter',
     myRole: 'Frontend Entwickler',
     workDuration: '1 Jahr',
@@ -127,8 +127,8 @@ export const projects: Array<Project> = [
   },
 
   {
-    img: '/website-admin-header.jpg',
-    lazyImg: '/website-admin-header-lazy.jpg',
+    img: '/workProjects/website-admin-header.jpg',
+    lazyImg: '/workProjects/website-admin-header-lazy.jpg',
     name: 'Statistisches Bundesamt',
     industry: 'Behörde',
     myRole: 'Software Entwickler / System Admin',
@@ -143,5 +143,4 @@ export const projects: Array<Project> = [
     ],
     technologies: ['Goverment Site Builder', 'Javascript', 'HTML 5', 'CSS 3', 'JSF'],
   },
-
 ]
