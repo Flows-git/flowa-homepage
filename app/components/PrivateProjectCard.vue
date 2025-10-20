@@ -34,10 +34,13 @@ defineProps<{
         <div class="font-weight-bold pb-1 pt-4">
           Links
         </div>
-        <div v-for="link of project.links" :key="link.url">
-          <NuxtLink target="_blank" :href="link.url">
+        <div v-for="link of project.links" :key="link.label + link.url">
+          <NuxtLink v-if="link.url?.length" target="_blank" :href="link.url">
             {{ link.label }}
           </NuxtLink>
+          <div v-else class="opacity-70">
+            {{ link.label }}
+          </div>
         </div>
       </template>
     </v-card-text>

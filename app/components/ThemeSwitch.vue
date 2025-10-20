@@ -19,7 +19,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <v-btn icon @click="toggleTheme">
+  <v-btn icon aria-label="Theme Switch" @click="toggleTheme">
     <Icon :name="icon" size="20" />
   </v-btn>
 </template>

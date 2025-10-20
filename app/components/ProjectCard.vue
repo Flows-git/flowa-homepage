@@ -15,12 +15,12 @@ defineProps<{
         </template>
         <div class="fill-height d-flex flex-column justify-space-between">
           <div class="pa-2">
-            <v-chip v-tooltip:end="`Meine Rolle`" color="primary" variant="flat">
+            <v-chip v-tooltip:end="`Meine Rolle`" aria-label="Meine Rolle" color="primary" variant="flat">
               {{ project.myRole }}
             </v-chip>
           </div>
           <div class="d-flex justify-end pa-2">
-            <v-chip v-tooltip:start="`Projekteinsatz`" variant="flat" color="white">
+            <v-chip v-tooltip:start="`Projekteinsatz`" aria-label="Projekteinsatz" variant="flat" color="white">
               {{ project.workDuration }}
             </v-chip>
           </div>
