@@ -97,31 +97,18 @@ const { smAndDown } = useDisplay()
 
     <v-parallax
       id="references" src="/subheader-2.jpg" lazy-src="/subheader-2-lazy.jpg"
-      alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 350"
+      alt="Hintergrund für eine Unterüberschrift - Zeigt abstrakte Linien die ein V darstellen" :height="smAndDown ? 200 : 300"
     >
       <div class="fill-height d-flex align-center justify-center">
         <span class="text-h2 text-white"> Referenzen </span>
       </div>
     </v-parallax>
+    <WorkProjectList class="mt-4" />
 
-    <v-container>
-      <v-row justify="center">
-        <v-col v-for="(project, i) of projects" :key="`project-${i}`" cols="12" sm="6" md="6" lg="4" xl="3">
-          <ProjectCard :project="project" class="fill-height" />
-        </v-col>
-      </v-row>
-    </v-container>
-
-    <v-container>
-      <div class="text-h3 pb-4">
-        <span class="gradient-text">Private Projekte</span>
-      </div>
-      <v-row justify="center">
-        <v-col v-for="(project, i) of privateProjects" :key="`project-${i}`" cols="12" sm="6" md="6" lg="4" xl="3">
-          <PrivateProjectCard :project="project" class="fill-height" />
-        </v-col>
-      </v-row>
-    </v-container>
+    <div class="text-h3 pa-4">
+      <span class="gradient-text">Private Projekte</span>
+    </div>
+    <PrivateProjectList class="mb-4" />
   </div>
 </template>
 
