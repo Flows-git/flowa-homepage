@@ -6,7 +6,7 @@ const { smAndDown } = useDisplay()
 </script>
 
 <template>
-  <div class="mt-n16">
+  <div>
     <v-parallax
       src="/background.jpg" lazy-src="/background-lazy.jpg" alt="Hintergrund des Willkommenstexts - Zeigt abstrakte Linien die ein F darstellen" cover
       height="100lvh" width="100vw"

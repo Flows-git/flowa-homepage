@@ -21,7 +21,7 @@ const menuitems = [
 <template>
   <v-app>
     <!-- header -->
-    <v-app-bar class="app-header px-3 pl-8 pl-md-3">
+    <v-app-bar class="app-header px-3 pl-8 pl-md-3" fixed>
       <div v-if="!sm" style="width: calc(50% - 24px);" />
       <div>
         <v-img src="/flowa-logo.png" height="48" width="48" alt="Logo der Webseite - Zeigt ein fancy F" />
@@ -47,7 +47,7 @@ const menuitems = [
     </v-navigation-drawer>
 
     <!-- content -->
-    <v-main>
+    <v-main style="--v-layout-top: 0px;">
       <NuxtPage />
     </v-main>
 
